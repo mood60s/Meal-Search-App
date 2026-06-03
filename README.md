@@ -1,2 +1,14 @@
 # Meal-Search-App
-Meal Search App is a responsive web application built with Vue.js and TheMealDB API. Users can search meals by name, browse meals from A to Z, view ingredients, cooking instructions, categories, and origins, watch YouTube tutorials, and enjoy real-time meal filtering with a fast and user-friendly interface.
+features
+Search meals by name.
+Browse meals alphabetically from A to Z.
+View detailed meal information.
+Display ingredients and measurements.
+Show meal category and area of origin.
+Follow step-by-step cooking instructions.
+Watch YouTube cooking tutorials.
+Real-time meal filtering.
+Fast API-powered data fetching.
+Responsive design for all devices.
+Dynamic routing between pages.
+Clean and user-friendly interface.
