@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+.header-navbar a, .alphabet .links {
+  color: #948979;
+  text-shadow: -1px 1px 1px #000;
+  transition: 0.3s linear color, text-shadow 0.3s linear;
+}
+.header-navbar a:hover, .alphabet .links:hover, .header-navbar a.router-link-exact-active, .alphabet .router-link-exact-active.links {
+  color: #dfd0b8;
+  text-shadow: -1px 1px 1px transparent;
+}
+
+/*Body*/
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #222831;
+}
+
+.youtube-source {
+  color: #948979;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  padding-bottom: 6px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.youtube-source a {
+  color: inherit;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  flex: 1 1 120px;
+  text-align: center;
+}
+.youtube-source .youtube {
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: 0.3s linear;
+  background-color: #000;
+  color: white;
+  transition: 0.3s linear background-color, 0.3s linear border-color;
+  border: 1px solid transparent;
+}
+.youtube-source .youtube:hover {
+  background-color: transparent;
+  border-color: #000;
+}
+.youtube-source .source-view {
+  border: 1px solid #000;
+  background-color: transparent;
+  transition: 0.3s linear border-color, 0.3s linear background-color;
+}
+.youtube-source .source-view:hover {
+  background-color: #393e46;
+  border-color: transparent;
+}
+
+.back-to-top {
+  background-color: #393e46;
+  position: fixed;
+  padding: 4px;
+  font-size: 33px;
+  z-index: 100;
+  color: #dfd0b8;
+  border-radius: 10px;
+  transform: translateY(-50%);
+  right: 0;
+  top: 52%;
+  border: 1px solid #948979;
+  transition: 0.3s linear;
+  box-shadow: 4px 4px 4px 4px black;
+  opacity: 0;
+  pointer-events: none;
+  font-weight: bold;
+}
+.back-to-top.active {
+  top: 50%;
+  opacity: 1;
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  border-color: transparent;
+  color: #948979;
+  box-shadow: 0px 0px 0px 2px black inset;
+}
+
+.meals-byname {
+  background: #393e46;
+  padding: 7px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.meals-byname .info .thumbnail {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 10px;
+}
+.meals-byname .info .thumbnail img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.meals-byname .info .thumbnail img:hover {
+  transform: scale(1.09);
+}
+.meals-byname .title {
+  color: #dfd0b8;
+  font-size: 22px;
+  font-style: italic;
+}
+.meals-byname .country {
+  color: #948979;
+  font-weight: 300;
+}
+
+/*Home Page*/
+:is(.search-input) {
+  color: #dfd0b8;
+}
+
+.title-home {
+  font-size: 40px;
+  font-style: italic;
+  text-shadow: 0px -4px 0px #000;
+  color: #948979;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+}
+.title-home::before {
+  content: attr(data-meal);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  color: #dfd0b8;
+  overflow: hidden;
+  animation: lightText 10s linear infinite alternate;
+  z-index: 100;
+}
+
+@keyframes lightText {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+.alphabet .links {
+  text-decoration: none;
+}
+
+.random-meal {
+  color: #948979;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.information {
+  cursor: pointer;
+  box-shadow: 0 0 2px #393e46;
+  padding: 10px;
+  transition: 0.3s linear box-shadow, 0.3s background linear;
+  background: transparent;
+}
+.information img {
+  object-fit: cover;
+}
+.information:hover {
+  background: #393e46;
+  box-shadow: 0 0 0px transparent;
+}
+.information .title {
+  color: #dfd0b8;
+  margin: 0;
+}
+.information .description {
+  color: #948979;
+}
+
+/*End Home Page*/
+.ingredients .title {
+  color: #dfd0b8;
+}
+.ingredients .search-block .search-input {
+  background-color: #393e46;
+  font-size: 20px;
+}
+.ingredients .search-block .boxs-grad {
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.ingredients .search-block .boxs-grad .box {
+  color: #948979;
+  font-weight: 300;
+  font-size: 19px;
+  transition: 0.2s linear color;
+  width: fit-content;
+}
+.ingredients .search-block .boxs-grad .box:hover {
+  color: #dfd0b8;
+}
+.ingredients .search-block .boxs-grad .box a {
+  color: inherit;
+  margin-bottom: 10px;
+}
+
+.thumbnail img {
+  max-width: 100%;
+}
+
+.information-meal {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+.information-meal .cat .category-area-tags h3 {
+  color: #dfd0b8;
+}
+.information-meal .cat .category-area-tags strong {
+  color: #948979;
+}
+.information-meal .instructions {
+  color: #dfd0b8;
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 14px;
+}
+.information-meal .ingredients {
+  display: flex;
+  gap: 10px;
+  counter-reset: count;
+}
+.information-meal .ingredients h3 {
+  color: #dfd0b8;
+  margin: 0;
+  padding: 0;
+}
+.information-meal .v-list-item__content {
+  color: #948979;
+  font-weight: 300;
+  font-size: 14px;
+}
+.information-meal a {
+  width: 100px;
+  cursor: pointer;
+}
+
+/*NavBar Start*/
+.header-navbar {
+  background-color: #393e46;
+  box-shadow: 0px 2px 10px 0px #000;
+  color: #948979;
+  height: 70px;
+}
+.header-navbar a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+.header-navbar a:not(.router-link-exact-active)::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: calc(100% - 20px);
+  background-color: #948979;
+  bottom: 0;
+  left: 10px;
+  transition: 0.2s;
+}
+.header-navbar a:hover::before {
+  width: 0;
+}
+
+.mobile-navbar .app-bar {
+  background: #393e46;
+  color: #dfd0b8;
+}
+.mobile-navbar .app-bar .holder-icon {
+  width: 24px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  margin: auto;
+}
+.mobile-navbar .app-bar .holder-icon .icon {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #948979;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.mobile-navbar .app-bar .holder-icon .icon:nth-child(1) {
+  top: 0;
+}
+.mobile-navbar .app-bar .holder-icon .icon:nth-child(2) {
+  top: 9px;
+}
+.mobile-navbar .app-bar .holder-icon .icon:nth-child(3) {
+  top: 18px;
+}
+.mobile-navbar .app-bar .holder-icon.active .icon:nth-child(1) {
+  top: 9px;
+  transform: rotate(45deg);
+}
+.mobile-navbar .app-bar .holder-icon.active .icon:nth-child(2) {
+  opacity: 0;
+}
+.mobile-navbar .app-bar .holder-icon.active .icon:nth-child(3) {
+  top: 9px;
+  transform: rotate(-45deg);
+}
+.mobile-navbar .myLinksMobile {
+  position: fixed;
+  width: 100%;
+  background-color: #393e46;
+  top: 100%;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.3s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
+  font-size: 16px;
+  color: #dfd0b8;
+}
+.mobile-navbar .myLinksMobile a {
+  color: inherit;
+}
+.mobile-navbar .myLinksMobile.active {
+  opacity: 1;
+  height: 200px;
+}
+
+/*NavBar End*/
+.meals {
+  background-color: #393e46;
+  padding: 0 8px;
+  border-radius: 6px;
+  box-shadow: -1px 1px #000;
+  text-transform: capitalize;
+  transition: 0.3s linear background-color, 0.3s linear box-shadow 0.3s, 0.3s opacity linear, 0.3s transform 0.2s linear;
+}
+.meals:hover {
+  background: transparent;
+  box-shadow: 3px 3px #393e46;
+}
+.meals .title {
+  color: #dfd0b8;
+  font-size: 24px;
+  margin: 0;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.meals .category {
+  color: #948979;
+}
+.meals .thumbnail {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.meals .description {
+  color: #948979;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.not-found {
+  text-transform: capitalize;
+  text-align: center;
+  padding: 8px;
+  box-shadow: 3px 2px 4px 1px #000;
+  background: #393e46;
+}
+.not-found h3 {
+  color: #dfd0b8;
+}
+.not-found p {
+  color: #948979;
+  margin: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,99 @@
+@use '../Helpers/Variables' as *;
+
+/*NavBar Start*/
+.header-navbar {
+  background-color: $NavBarArticleCardColors;
+  box-shadow: 0px 2px 10px 0px #000;
+  color: $ParagraphAndHashColors;
+  height: 70px;
+  a {
+    @extend %links;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    &:not(.router-link-exact-active)::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: calc(100% - 20px);
+      background-color: $ParagraphAndHashColors;
+      bottom: 0;
+      left: 10px;
+      transition: 0.2s;
+    }
+    &:hover::before {
+      width: 0;
+    }
+  }
+}
+.mobile-navbar {
+  .app-bar {
+    background: $NavBarArticleCardColors;
+    color: $HeadingColors;
+    .holder-icon {
+      width: 24px;
+      height: 20px;
+      position: relative;
+      cursor: pointer;
+      margin: auto;
+      .icon {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #948979;
+        left: 0;
+        transition: all 0.3s ease;
+      }
+      .icon:nth-child(1) {
+        top: 0;
+      }
+      .icon:nth-child(2) {
+        top: 9px;
+      }
+      .icon:nth-child(3) {
+        top: 18px;
+      }
+      &.active {
+        .icon:nth-child(1) {
+          top: 9px;
+          transform: rotate(45deg);
+        }
+        .icon:nth-child(2) {
+          opacity: 0;
+        }
+        .icon:nth-child(3) {
+          top: 9px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  .myLinksMobile {
+    position: fixed;
+    width: 100%;
+    background-color: $NavBarArticleCardColors;
+    top: 100%;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+    font-size: 16px;
+    color: $HeadingColors;
+    a {
+      color: inherit;
+    }
+    &.active {
+      opacity: 1;
+      height: 200px;
+    }
+  }
+}
+
+/*NavBar End*/

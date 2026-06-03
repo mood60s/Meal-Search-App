@@ -1,0 +1,21 @@
+// Colors:
+// #222831 Body
+// #393E46 Navbar Article Card
+// #948979 Paragraph Hash
+// #DFD0B8  h1 h2
+$bodyColors: #222831;
+$NavBarArticleCardColors: #393e46;
+$ParagraphAndHashColors: #948979;
+$HeadingColors: #dfd0b8;
+%links {
+  color: $ParagraphAndHashColors;
+  text-shadow: -1px 1px 1px #000;
+  transition:
+    0.3s linear color,
+    text-shadow 0.3s linear;
+  &:hover,
+  &.router-link-exact-active {
+    color: $HeadingColors;
+    text-shadow: -1px 1px 1px transparent;
+  }
+}

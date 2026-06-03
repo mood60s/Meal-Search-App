@@ -1,0 +1,32 @@
+@use '../helpers/Variables' as *;
+.meals-byname {
+  background: $NavBarArticleCardColors;
+  padding: 7px;
+  border-radius: 10px;
+  overflow: hidden;
+  .info {
+    .thumbnail {
+      overflow: hidden;
+      width: 100%;
+      border-radius: 10px;
+      img {
+        width: 100%;
+        display:block;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.09);
+        }
+      }
+    }
+  }
+  .title {
+    color: $HeadingColors;
+    font-size: 22px;
+    font-style: italic;
+  }
+  .country {
+    color: $ParagraphAndHashColors;
+    font-weight:300;
+  }
+}

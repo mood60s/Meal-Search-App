@@ -1,0 +1,82 @@
+@use '../Helpers/Variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/*Body*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: $bodyColors;
+}
+// Global Buttons
+.youtube-source {
+  color: $ParagraphAndHashColors;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  padding-bottom: 6px;
+  flex-wrap: wrap;
+  gap: 6px;
+  a {
+    color: inherit;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    flex: 1 1 120px;
+    text-align: center;
+  }
+  .youtube {
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: 0.3s linear;
+    background-color: #000;
+    color: white;
+    transition:
+      0.3s linear background-color,
+      0.3s linear border-color;
+    border: 1px solid transparent;
+    &:hover {
+      background-color: transparent;
+      border-color: #000;
+    }
+  }
+  .source-view {
+    border: 1px solid #000;
+    background-color: transparent;
+    transition:
+      0.3s linear border-color,
+      0.3s linear background-color;
+    &:hover {
+      background-color: #393e46;
+      border-color: transparent;
+    }
+  }
+}
+// Back To Up button
+.back-to-top {
+  background-color: $NavBarArticleCardColors;
+  position: fixed;
+  padding: 4px;
+  font-size: 33px;
+  z-index: 100;
+  color: $HeadingColors;
+  border-radius: 10px;
+  transform: translateY(-50%);
+  right: 0;
+  top: 52%;
+  border: 1px solid $ParagraphAndHashColors;
+  transition: 0.3s linear;
+  box-shadow: 4px 4px 4px 4px black;
+  opacity: 0;
+  pointer-events: none;
+  font-weight: bold;
+  &.active {
+    top: 50%;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  &:hover {
+    border-color: transparent;
+    color: $ParagraphAndHashColors;
+    box-shadow: 0px 0px 0px 2px black inset;
+  }
+}

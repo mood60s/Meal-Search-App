@@ -1,0 +1,55 @@
+@use '../Helpers/Variables' as *;
+
+.meals {
+  background-color: $NavBarArticleCardColors;
+  padding: 0 8px;
+  border-radius: 6px;
+  box-shadow: -1px 1px #000;
+  text-transform: capitalize;
+  transition:
+    0.3s linear background-color,
+    0.3s linear box-shadow 0.3s,
+    0.3s opacity linear,
+    0.3s transform 0.2s linear;
+  &:hover {
+    background: transparent;
+    box-shadow: 3px 3px $NavBarArticleCardColors;
+  }
+
+  .title {
+    color: $HeadingColors;
+    font-size: 24px;
+    margin: 0;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .category {
+    color: $ParagraphAndHashColors;
+  }
+  .thumbnail {
+    width: 100%;
+    height: 220px; // ← ثبت الـ height
+    object-fit: cover; // ← عشان الصورة متتقطعش
+    border-radius: 6px;
+  }
+  .description {
+    color: $ParagraphAndHashColors;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+.not-found {
+  text-transform: capitalize;
+  text-align: center;
+  padding: 8px;
+  box-shadow: 3px 2px 4px 1px #000;
+  background: #393e46;
+  h3 {
+    color: $HeadingColors;
+  }
+  p {
+    color: $ParagraphAndHashColors;
+    margin: 0;
+  }
+}

@@ -1,0 +1,71 @@
+/*Home Page*/
+@use '../Helpers/Variables' as *;
+:is(.search-input) {
+  color: $HeadingColors;
+}
+.title-home {
+  font-size: 40px;
+  font-style: italic;
+  text-shadow: 0px -4px 0px #000;
+  color: $ParagraphAndHashColors;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: attr(data-meal);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    color: $HeadingColors;
+    overflow: hidden;
+    animation: lightText 10s linear infinite alternate;
+    z-index: 100;
+  }
+}
+@keyframes lightText {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+.alphabet {
+  .links {
+    @extend %links;
+    text-decoration: none;
+  }
+}
+.random-meal {
+  color: $ParagraphAndHashColors;
+  font-weight: 300;
+  font-size: 18px;
+}
+.information {
+  cursor: pointer;
+  box-shadow: 0 0 2px $NavBarArticleCardColors;
+  padding: 10px;
+  transition:
+    0.3s linear box-shadow,
+    0.3s background linear;
+  background: transparent;
+  img {
+    object-fit: cover;
+  }
+  &:hover {
+    background: $NavBarArticleCardColors;
+    box-shadow: 0 0 0px transparent;
+  }
+  .title {
+    color:$HeadingColors;
+    margin: 0;
+  }
+  .description {
+    color: $ParagraphAndHashColors;
+  }
+}
+/*End Home Page*/

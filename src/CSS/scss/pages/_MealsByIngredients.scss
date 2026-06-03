@@ -1,0 +1,31 @@
+@use '../Helpers/Variables' as *;
+.ingredients {
+  .title {
+    color: $HeadingColors;
+  }
+  .search-block {
+    .search-input {
+      background-color: $NavBarArticleCardColors;
+      font-size:20px;
+    }
+    .boxs-grad {
+      padding: 10px;
+      border-radius: 20px;
+      margin-top: 20px;
+      .box {
+        color: $ParagraphAndHashColors;
+        font-weight: 300;
+        font-size: 19px;
+        transition: 0.2s linear color;
+        width: fit-content;
+        &:hover {
+          color: $HeadingColors;
+        }
+        a {
+          color: inherit;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
